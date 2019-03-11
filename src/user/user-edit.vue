@@ -2,7 +2,7 @@
      <div class="col-lg-6 text-center background-color">
          <h2>User Edit </h2>
          <p>Age: {{userAge}}</p>
-         <button @click="editAge(30)">Change age</button>
+         <button @click="editAge">Change age</button>
     </div>
 </template>
 
@@ -15,8 +15,10 @@ export default {
     },
     methods: {
         editAge(age){
+            this.userAge = 30;
             // this.$emit('changedAge',30);
-            eventBus.$emit('changedAge',age);
+            eventBus.$emit('changedAge',this.userAge);
+            // eventBus.changeAge(15);
         },
         changeAge(){
             this.userAge = 20;

@@ -31,7 +31,7 @@ export default {
         return{
             name: 'Le Hoai',
             eventHandle: 'Event',
-            age: 18
+            age: 10
         }
     },
     components:{
